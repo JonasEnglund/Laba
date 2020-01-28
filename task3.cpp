@@ -1,107 +1,91 @@
 #include <iostream>
-
 using namespace std;
-
-struct first_str1 
+struct first_car_1 
 {
-	int num;
-	short num_1;
-	double num_2;
+	int speed;
+	short distance;
+	double time;
 };
-
-struct second_str1 
+struct second_car_1
 {
-	double num_2;
-	short num_1;
-	int num;
+	double time
+	short distance;
+	bool exist;
 };
-
 #pragma pack(push, 1)
-
-struct first_str2 // Выравненное по 1 байту
+struct first_car_2 // Выравненное по 1 байту
 {
-	int num;
-	short num_1;
-	double num_2;
+	int speed;
+	short distance;
+	double time;
 };
-
-struct second_str2 
-{
-	double num_2;
-	short num_1;
-	int num;
-};
-
 #pragma pack(pop)
-
-void print_ad1(first_str1 a)
+struct second_car_2 
 {
-	cout << &(a.num) << endl;
-	cout <<	&(a.num_1) << endl;
-	cout << &(a.num_2) << endl;
+	bool exist;
+	short distance;
+	double time;
+};
+void print_ad1(first_car_1 a)
+{
+	cout << &(a.speed) << endl;
+	cout << &(a.time) << endl;
+	cout << &(a.distance) << endl;
 	cout << endl;
 }
-
-void print_ad2(first_str2 a)
+void print_ad2(first_car_2 a)
 {
-	cout << &(a.num) << endl;
-	cout <<	&(a.num_1) << endl;
-	cout << &(a.num_2) << endl;
+	cout << &(a.speed) << endl;
+	cout << &(a.time) << endl;
+	cout << &(a.distance) << endl;
 	cout << endl;
 }
-
-void print_ad3(second_str1 a)
+void print_ad3(second_car_1 a)
 {
-	cout << &(a.num) << endl;
-	cout <<	&(a.num_1) << endl;
-	cout << &(a.num_2) << endl;
+	cout << &(a.speed) << endl;
+	cout << &(a.time) << endl;
+	cout << &(a.distance) << endl;
 	cout << endl;
 }
-
-void print_ad4(second_str2 a)
+void print_ad4(second_car_2 a)
 {
-	cout << &(a.num) << endl;
-	cout <<	&(a.num_1) << endl;
-	cout << &(a.num_2) << endl;
+	cout << &(a.speed) << endl;
+	cout << &(a.time) << endl;
+	cout << &(a.distance) << endl;
 	cout << endl;
 }
-
-void get_size1(first_str1 a)
+void get_size1(first_car_1 a)
 {
 	int size;
-	size = sizeof(a.num) + sizeof(a.num_1) + sizeof(a.num_2);
+	size = sizeof(a.speed) + sizeof(a.time) + sizeof(a.distance);
 	cout << "Size of structure from sum of fields: " << size << endl;
 	cout << "Size of structure from 'sizeof': " << sizeof(a) << endl;
 	cout << endl;
 }
-
-void get_size3(second_str1 a)
+void get_size3(second_car_1 a)
 {
 	int size;
-	size = sizeof(a.num) + sizeof(a.num_1) + sizeof(a.num_2);
+	size = sizeof(a.speed) + sizeof(a.time) + sizeof(a.distance);
 	cout << "Size of structure from sum of fields: " << size << endl;
 	cout << "Size of structure from 'sizeof': " << sizeof(a) << endl;
 	cout << endl;
 }
-
-void get_size2(first_str2 a) 
+void get_size2(first_car_2 a) 
 {
 	int size;
-	size = sizeof(a.num) + sizeof(a.num_1) + sizeof(a.num_2);
+	size = sizeof(a.exist) + sizeof(a.time) + sizeof(a.distance);
 	cout << "Size of structure from sum of fields: " << size << endl;
 	cout << "Size of structure from 'sizeof': " << sizeof(a) << endl;
 	cout << endl;
 }
-
-void get_size4(second_str2 a)
+void get_size4(second_car_2 a)
 {
 	int size;
-	size = sizeof(a.num) + sizeof(a.num_1) + sizeof(a.num_2);
+	size = sizeof(a.exist) + sizeof(a.time) + sizeof(a.distance);
 	cout << "Size of structure from sum of fields: " << size << endl;
 	cout << "Size of structure from 'sizeof': " << sizeof(a) << endl;
 	cout << endl;
 }
-
 int main()
 {
 	first_str1 test_1;	
@@ -121,4 +105,3 @@ int main()
 	print_ad4(test_4);
 	get_size4(test_4);
 }
-
