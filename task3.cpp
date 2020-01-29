@@ -31,6 +31,7 @@ struct second_car_2
 };
 void print_ad1(first_car_1 a)
 {
+	cout << “Location of fields” << endl;
 	cout << &(a.speed) << endl;
 	cout << &(a.time) << endl;
 	cout << &(a.distance) << endl;
@@ -38,6 +39,7 @@ void print_ad1(first_car_1 a)
 }
 void print_ad2(first_car_2 a)
 {
+	cout << “Location of fields” << endl;
 	cout << &(a.speed) << endl;
 	cout << &(a.time) << endl;
 	cout << &(a.distance) << endl;
@@ -45,6 +47,7 @@ void print_ad2(first_car_2 a)
 }
 void print_ad3(second_car_1 a)
 {
+	cout << “Location of fields” << endl;
 	cout << &(a.exist) << endl;
 	cout << &(a.time) << endl;
 	cout << &(a.distance) << endl;
@@ -52,6 +55,7 @@ void print_ad3(second_car_1 a)
 }
 void print_ad4(second_car_2 a)
 {
+	cout << “Location of fields” << endl;
 	cout << &(a.exist) << endl;
 	cout << &(a.time) << endl;
 	cout << &(a.distance) << endl;
