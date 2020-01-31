@@ -23,8 +23,7 @@ void second_show_darray(size_t ar_s1, size_t ar_s2, int** arr)
 	for(size_t i = 0; i < ar_s1; ++i)
 		for(size_t j = 0; j < ar_s2; ++j)
 			cout << &arr[i][j] << endl;
-	cout << endl;
-		
+	cout << endl;		
 }
 
 int main()
